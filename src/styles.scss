@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+
+// $blue: #6562ff;
+// $indigo: #6610f2;
+// $purple: #6f42c1;
+// $pink: #d63384;
+// $red: #f54646;
+// $orange: #f5464660;
+// $yellow: #ffc107;
+// $green: #69baa4;
+// $teal: rgb(86, 186, 164);
+// $cyan: #8dace160;
+// $dark:#484554;
+
+
+$secondary: #6f42c1;
+$body-color: #ffffffa6;
+$body-bg: #000;
+
+:root {
+    font-size: 12px;
+}
+@import '~bootstrap/scss/bootstrap';
