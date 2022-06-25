@@ -12,11 +12,48 @@
 // $dark:#484554;
 
 
+@font-face {
+    font-family: 'corsiva';
+    src: url('/assets/font/corsiva.tff')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'smooch';
+    src: url('/assets/font/smooch.ttf')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'indie';
+    src: url('/assets/font/indie.ttf')
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'lobster';
+    src: url('/assets/font/lobster.ttf')
+    format('truetype');
+}
+
 $secondary: #6f42c1;
 $body-color: #ffffffa6;
 $body-bg: #000;
 
 :root {
-    font-size: 12px;
+    font-family: 'corsiva';
+    font-size: 16px;
 }
+
+// $font-family-base: 'corsiva';
+
 @import '~bootstrap/scss/bootstrap';
+
+
+h1 {
+    font-family: 'lobster';
+}
+
+h2 {
+    font-family: 'indie';
+}
