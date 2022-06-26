@@ -1,0 +1,52 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">L'ancien testament</h5>
+  <div>
+    La Bible est un terme qui est utilisé dans quelles religions ?
+  </div>
+  <div class="row justify-content-center m-5">
+    <div class="col"></div>
+    <form class="col-auto text-start">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="judaisme" id="judaisme">
+        <label class="form-check-label">
+          Judaïsme
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="christrianisme" id="christrianisme">
+        <label class="form-check-label">
+          Christrianisme
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="islam" id="islam">
+        <label class="form-check-label">
+          Islam
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="hindouisme" id="hindouisme">
+        <label class="form-check-label">
+          Hindouisme
+        </label>
+      </div>
+    </form>
+    <div class="col"></div>
+  </div>
+  <div *ngIf="score === undefined">
+    <div class="text-center">
+      <button class="btn btn-primary rounded-pill py-2 px-5" (click)="validate()">Valider</button>
+    </div>
+  </div>
+  <div *ngIf="score !== undefined">
+    <p class="m-5">
+      La Bible est un ensemble de textes sacrés pour les juifs et les chrétiens.
+    </p>
+    <p class="m-5">
+      <button class="btn btn-primary rounded-pill py-2 px-5" (click)="next.emit(score)">Suivant</button>
+    </p>
+  </div>
+</div>

@@ -12,6 +12,9 @@ import { OrganisationComponent } from './components/organisation/organisation.co
 import { CommunauteComponent } from './components/communaute/communaute.component';
 import { HistoireComponent } from './components/histoire/histoire.component';
 import { SaintsComponent } from './components/saints/saints.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AtOneComponent } from './components/ancien-testament/at-one/at-one.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { SaintsComponent } from './components/saints/saints.component';
     OrganisationComponent,
     CommunauteComponent,
     HistoireComponent,
-    SaintsComponent
+    SaintsComponent,
+    AtOneComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
+    NgbModule,
     AppRoutingModule
   ],
   providers: [],

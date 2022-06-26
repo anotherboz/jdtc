@@ -1,4 +1,4 @@
-<h1 class="text-center text-primary">CATO GAME</h1>
+<h1 class="text-center text-primary m-3">CATO GAME</h1>
 
 <div class="row justify-content-center my-3 g-3">
   <div class="col-12 col-md-6 col-lg-4">
@@ -11,7 +11,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.ancienTestament.point as point">
+          <span *ngIf="stats.ancienTestament.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -29,7 +29,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.nouveauTestament.point as point">
+          <span *ngIf="stats.nouveauTestament.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -47,7 +47,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.messe.point as point">
+          <span *ngIf="stats.messe.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -65,7 +65,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.organisation.point as point">
+          <span *ngIf="stats.organisation.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -83,7 +83,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.communaute.point as point">
+          <span *ngIf="stats.communaute.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -101,7 +101,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.histoire.point as point">
+          <span *ngIf="stats.histoire.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -119,7 +119,7 @@
         </p>
         <div class="text-end text-muted">
           &nbsp;
-          <span *ngIf="stats.saints.point as point">
+          <span *ngIf="stats.saints.point as point; else demarrer">
             {{point}} pts
           </span>
         </div>
@@ -145,3 +145,5 @@
     </div>
   </div>
 </div>
+
+<ng-template #demarrer>Démarrer</ng-template>

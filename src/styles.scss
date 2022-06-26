@@ -38,6 +38,7 @@
 
 $primary: #3C58CF;
 $secondary: #CFAA3C; // #6f42c1;
+$light: #3c57cf83;
 $body-color: #ffffffa6;
 $body-bg: #000;
 
@@ -57,4 +58,12 @@ h1 {
 
 h2 {
     font-family: 'indie';
+}
+
+.form-check-input {
+  background-color: var(--bs-light);
+}
+
+.progress {
+  background-color: var(--bs-light);
 }

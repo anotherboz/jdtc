@@ -1,1 +1,20 @@
-<p>ancien-testament works!</p>
+<p class="p-5"><ngb-progressbar *ngIf="step" type="primary" [value]="100*step/stepCount" height="10px"></ngb-progressbar></p>
+
+<div [ngSwitch]="step">
+
+  <div class="text-center">
+    <div *ngSwitchCase="0">
+      <h5 class="text-secondary m-3">L'ancien testament</h5>
+      <img src="assets/moise.jpg">
+      <p class="m-5">
+        <button class="btn btn-primary rounded-pill py-2 px-5" (click)="next()">Commencer</button>
+      </p>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="1">
+    <app-at-one (next)="next($event)"></app-at-one>
+  </div>
+
+
+</div>
