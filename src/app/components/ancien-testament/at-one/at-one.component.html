@@ -7,29 +7,29 @@
     <div class="col"></div>
     <form class="col-auto text-start">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="judaisme" id="judaisme">
-        <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="judaisme" name="judaisme" id="judaisme">
+        <label class="form-check-label" for="judaisme">
           Judaïsme
         </label>
       </div>
 
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="christrianisme" id="christrianisme">
-        <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="christrianisme" name="christrianisme" id="christrianisme">
+        <label class="form-check-label" for="christrianisme">
           Christrianisme
         </label>
       </div>
 
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="islam" id="islam">
-        <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="islam" name="islam" id="islam">
+        <label class="form-check-label" for="islam">
           Islam
         </label>
       </div>
 
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="hindouisme" id="hindouisme">
-        <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="hindouisme" name="hindouisme" id="hindouisme">
+        <label class="form-check-label"  for="hindouisme">
           Hindouisme
         </label>
       </div>
@@ -42,6 +42,9 @@
     </div>
   </div>
   <div *ngIf="score !== undefined">
+    <div class="text-center">
+      <img *ngIf="score > 0; else ko" width="150" src="assets/jesus-ok.gif" alt="ok">
+    </div>
     <p class="m-5">
       La Bible est un ensemble de textes sacrés pour les juifs et les chrétiens.
     </p>
@@ -50,3 +53,7 @@
     </p>
   </div>
 </div>
+
+<ng-template #ko>
+  <img src="assets/jesus-ko.gif" width="150" alt="ko">
+</ng-template>
