@@ -15,6 +15,7 @@ import { SaintsComponent } from './components/saints/saints.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AtOneComponent } from './components/ancien-testament/at-one/at-one.component';
 import { FormsModule } from '@angular/forms';
+import { CrucifixComponent } from './components/ui/crucifix/crucifix.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     CommunauteComponent,
     HistoireComponent,
     SaintsComponent,
-    AtOneComponent
+    AtOneComponent,
+    CrucifixComponent
   ],
   imports: [
     AppRoutingModule,
