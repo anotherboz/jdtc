@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AutoRouteService } from 'src/app/services/auto-route.service';
 
 @Component({
   selector: 'app-menu',
@@ -34,7 +35,7 @@ export class MenuComponent implements OnInit {
     },
   }
 
-  constructor() { }
+  constructor(public route: AutoRouteService) { }
 
   ngOnInit(): void {
   }

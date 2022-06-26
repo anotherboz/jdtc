@@ -15,6 +15,10 @@ export class AutoRouteService {
         break;
     }
     this.router.navigate([this.currentRoute]);
+  }
 
+  go(dest: string) {
+    this.currentRoute = dest;
+    this.router.navigate([this.currentRoute]);
   }
 }

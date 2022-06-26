@@ -1,3 +1,16 @@
-.card-text {
-  height: 6em;
+.card {
+  cursor: pointer;
+  .card-title {
+    color: var(--bs-secondary);
+  }
+  .card-text {
+    height: 6em;
+  }
+
+  &.text-muted {
+    img {
+      filter: opacity(25%);
+      // filter: grayscale(80%);
+    }
+  }
 }
