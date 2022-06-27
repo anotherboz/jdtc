@@ -1,0 +1,27 @@
+<div *ngIf="score === undefined">
+  <div class="text-center">
+    <button
+      class="btn btn-primary rounded-pill py-2 px-5"
+      (click)="validate.emit()"
+    >
+      Valider
+    </button>
+  </div>
+</div>
+<div *ngIf="score !== undefined">
+  <div class="text-center">
+    <span [@slideOutUp]="'enter'" class="fs-3 points">
+      + {{ score }} pt(s)</span
+    >
+    <img
+      *ngIf="score > 0; else ko"
+      width="150"
+      src="assets/jesus-ok.gif"
+      alt="ok"
+    />
+  </div>
+</div>
+
+<ng-template #ko>
+  <img src="assets/jesus-ko.gif" width="150" alt="ko" />
+</ng-template>

@@ -17,6 +17,8 @@ import { AtOneComponent } from './components/ancien-testament/at-one/at-one.comp
 import { FormsModule } from '@angular/forms';
 import { AtTwoComponent } from './components/ancien-testament/at-two/at-two.component';
 import { CrucifixComponent } from './components/ui/crucifix/crucifix.component';
+import { ResultComponent } from './components/ui/result/result.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,16 +34,18 @@ import { CrucifixComponent } from './components/ui/crucifix/crucifix.component';
     SaintsComponent,
     AtOneComponent,
     AtTwoComponent,
-    CrucifixComponent
+    CrucifixComponent,
+    ResultComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
