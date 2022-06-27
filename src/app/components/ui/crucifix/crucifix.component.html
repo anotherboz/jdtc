@@ -1,0 +1,14 @@
+<div class="line">
+  <span class="fs-1 mx-2 border-bottom letter" style="width: 4em;" *ngFor="let letter of letters">{{letter.found ? letter.letter : '&#160;'}}</span>
+  <span class="mx-4">&nbsp;</span>
+  <ng-container [ngSwitch]="step">
+    <img *ngSwitchCase="1" src="assets/crx1.png">
+    <img *ngSwitchCase="2" src="assets/crx2.png">
+    <img *ngSwitchCase="3" src="assets/crx3.png">
+    <img *ngSwitchCase="4" src="assets/crx4.png">
+    <img *ngSwitchCase="5" src="assets/crx5.png">
+    <img *ngSwitchCase="6" src="assets/crx6.png">
+    <img *ngSwitchCase="7" src="assets/crx7.png">
+  </ng-container>
+
+</div>
