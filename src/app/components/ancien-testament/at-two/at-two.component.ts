@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Question } from '../../ui/picture-list/picture-list.component';
 
 @Component({
   selector: 'app-at-two',
@@ -7,19 +8,34 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class AtTwoComponent implements OnInit {
   @Output() next = new EventEmitter<number>()
-  select?:number;
+
+  questions: Question[] = [
+    {
+      label: 'Canon',
+      attended: false,
+      url: 'assets/canon.png'
+    },
+    {
+      label: 'Bombe',
+      attended: false,
+      url: 'assets/bombe.png'
+    },
+    {
+      label: 'Rouleaux',
+      attended: false,
+      url: 'assets/rouleaux.png'
+    },
+    {
+      label: 'Chaîne',
+      attended: false,
+      url: 'assets/chaine.png'
+    }
+  ]
+
   score?: number = undefined;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  validate(): void {
-    if (this.select === 1) {
-      this.score = 1;
-    } else {
-      this.score = 0;
-    }
   }
 }

@@ -21,6 +21,8 @@ import { ResultComponent } from './components/ui/result/result.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckListComponent } from './components/ui/check-list/check-list.component';
 import { ValidateComponent } from './components/ui/validate/validate.component';
+import { PictureListComponent } from './components/ui/picture-list/picture-list.component';
+import { AtThreeComponent } from './components/ancien-testament/at-three/at-three.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ValidateComponent } from './components/ui/validate/validate.component';
     ResultComponent,
     CheckListComponent,
     ValidateComponent,
+    PictureListComponent,
+    AtThreeComponent,
   ],
   imports: [
     AppRoutingModule,

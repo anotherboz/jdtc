@@ -7,7 +7,7 @@ import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@a
 })
 export class CrucifixComponent implements OnInit {
   @Input() word!: string;
-  @Output() success = new EventEmitter<number>();
+  @Output() score = new EventEmitter<number>();
   letters: { letter: string; found: boolean }[] = [];
   step = 1;
   done = false;
@@ -28,7 +28,7 @@ export class CrucifixComponent implements OnInit {
 
     let oneFound = false;
     this.letters.forEach(l => {
-      if(l.letter === key) {
+      if(l.letter.toLocaleLowerCase() === key.toLocaleLowerCase()) {
         l.found = true;
         oneFound = true;
       }
@@ -37,7 +37,7 @@ export class CrucifixComponent implements OnInit {
     if (this.letters.every(l => l.found)) {
       this.done = true;
       this.result = 1;
-      this.success.emit(1);
+      this.score.emit(1);
     }
     if (oneFound) {
       return;
@@ -45,11 +45,10 @@ export class CrucifixComponent implements OnInit {
     if (this.step===7) {
       this.done = true;
       this.result = 0;
-      this.success.emit(0);
+      this.score.emit(0);
       return;
     }
     this.step++;
 
   }
-
 }

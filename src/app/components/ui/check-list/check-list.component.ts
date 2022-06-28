@@ -13,12 +13,12 @@ export interface Question {
   templateUrl: './check-list.component.html',
   styleUrls: ['./check-list.component.scss']
 })
-export class CheckListComponent implements OnInit, OnChanges, OnDestroy {
+export class CheckListComponent implements OnInit, OnChanges {
   @Input() questions?: Question[];
   @Output() score = new EventEmitter<number>();
   result?: number;
   group?: FormGroup;
-  subscription?: Subscription;
+
   get list() { return this.group?.get('list') as FormArray; }
   lock = false;
 
@@ -41,9 +41,6 @@ export class CheckListComponent implements OnInit, OnChanges, OnDestroy {
         this.list.controls.forEach(c => c.disable())
       }
   }
-  ngOnDestroy(): void {
-      // this.subscription?.unsubscribe();
-  }
 
   validate(): void {
     const list = this.list.getRawValue() as boolean[];
@@ -57,5 +54,4 @@ export class CheckListComponent implements OnInit, OnChanges, OnDestroy {
     this.score.emit(this.result);
     this.lock=true;
   }
-
 }

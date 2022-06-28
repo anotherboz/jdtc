@@ -1,61 +1,9 @@
 <div class="text-center">
   <h5 class="text-secondary m-3">Textes sacrés</h5>
   <div>Comment appelle-t-on le regroupement des textes sacrés ?</div>
-  <div class="row justify-content-center m-5">
-    <div class="col py-2">
-      <div
-        class="bg-dark card"
-        (click)="select = 1"
-        [ngClass]="{ selected: select === 1 }"
-      >
-        <img src="assets/canon.png" class="card-img-top" alt="canon" />
-        <div class="card-body">
-          <p class="card-text">Canon</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="col py-2">
-      <div
-        class="bg-dark card"
-        (click)="select = 2"
-        [ngClass]="{ selected: select === 2 }"
-      >
-        <img src="assets/bombe.png" class="card-img-top" alt="bombe" />
-        <div class="card-body">
-          <p class="card-text">Bombe</p>
-        </div>
-      </div>
-    </div>
+  <app-picture-list [questions]="questions" (score)="score = $event"></app-picture-list>
 
-    <div class="col py-2">
-      <div
-        class="bg-dark card"
-        (click)="select = 3"
-        [ngClass]="{ selected: select === 3 }"
-      >
-        <img src="assets/rouleaux.png" class="card-img-top" alt="rouleaux" />
-        <div class="card-body">
-          <p class="card-text">Rouleaux</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col py-2">
-      <div
-        class="bg-dark card"
-        (click)="select = 4"
-        [ngClass]="{ selected: select === 4 }"
-      >
-        <img src="assets/chaine.png" class="card-img-top" alt="chaine" />
-        <div class="card-body">
-          <p class="card-text">Chaîne</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <app-validate (validate)="validate()"></app-validate>
-  <app-result [score]="score"></app-result>
   <div *ngIf="score !== undefined">
     <p class="mt-5">
       La Bible est un ensemble de textes sacrés pour les juifs et les chrétiens.
@@ -71,6 +19,3 @@
   </div>
 </div>
 
-<ng-template #ko>
-  <img src="assets/jesus-ko.gif" width="150" alt="ko" />
-</ng-template>

@@ -1,0 +1,15 @@
+<div class="row justify-content-center m-5">
+  <div *ngFor="let question of questions; let i=index" class="col py-2">
+    <div
+      class="bg-dark card"
+      (click)="select(i)"
+      [ngClass]="{ selected: selected === i }"
+    >
+      <img [src]="question.url" class="card-img-top" alt="canon" />
+      <div class="card-body">
+        <p class="card-text">{{question.label}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-result [score]="result"></app-result>

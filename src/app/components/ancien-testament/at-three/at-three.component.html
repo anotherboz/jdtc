@@ -1,0 +1,26 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Les personnes qui étudient le texte</h5>
+  <div></div>
+
+  <app-crucifix word="EXEGETE" (score)="score = $event"></app-crucifix>
+
+  <div *ngIf="score !== undefined">
+    <p class="mt-5">
+      De nombreux passages de la Bible sont obscurs. On appelle exégètes ceux qui étudient le texte pour en extraire une signification philologique ou doctrinale.
+    </p>
+    <p>
+      La philologie c’est l'étude d'une langue et de sa littérature à partir de documents écrits. Cela combine la critique littéraire, historique et linguistique
+    </p>
+    <p>
+      Une doctrine est un ensemble de croyances ou de principes traduisant une conception de l'univers, de la société, etc., constituant un système d'enseignement religieux, philosophique, politique
+    </p>
+    <p class="m-5">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>
