@@ -14,11 +14,13 @@ import { HistoireComponent } from './components/histoire/histoire.component';
 import { SaintsComponent } from './components/saints/saints.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AtOneComponent } from './components/ancien-testament/at-one/at-one.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AtTwoComponent } from './components/ancien-testament/at-two/at-two.component';
 import { CrucifixComponent } from './components/ui/crucifix/crucifix.component';
 import { ResultComponent } from './components/ui/result/result.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CheckListComponent } from './components/ui/check-list/check-list.component';
+import { ValidateComponent } from './components/ui/validate/validate.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AtTwoComponent,
     CrucifixComponent,
     ResultComponent,
+    CheckListComponent,
+    ValidateComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     AppRoutingModule,
   ],

@@ -54,7 +54,8 @@
       </div>
     </div>
   </div>
-  <app-result [score]="score" (validate)="validate()"></app-result>
+  <app-validate (validate)="validate()"></app-validate>
+  <app-result [score]="score"></app-result>
   <div *ngIf="score !== undefined">
     <p class="mt-5">
       La Bible est un ensemble de textes sacrés pour les juifs et les chrétiens.

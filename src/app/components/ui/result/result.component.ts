@@ -12,7 +12,6 @@ import { fadeInDown, slideOutUp } from '../fade.animation';
 })
 export class ResultComponent implements OnInit {
   @Input() score?: number;
-  @Output() validate = new EventEmitter<void>();
   slideOutUp: any;
 
   constructor() {}

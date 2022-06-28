@@ -7,10 +7,11 @@ import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@a
 })
 export class CrucifixComponent implements OnInit {
   @Input() word!: string;
-  @Output() success = new EventEmitter<boolean>();
+  @Output() success = new EventEmitter<number>();
   letters: { letter: string; found: boolean }[] = [];
   step = 1;
   done = false;
+  result?: number;
   constructor() { }
 
   ngOnInit(): void {
@@ -35,14 +36,16 @@ export class CrucifixComponent implements OnInit {
 
     if (this.letters.every(l => l.found)) {
       this.done = true;
-      this.success.emit(true);
+      this.result = 1;
+      this.success.emit(1);
     }
     if (oneFound) {
       return;
     }
     if (this.step===7) {
       this.done = true;
-      this.success.emit(false);
+      this.result = 0;
+      this.success.emit(0);
       return;
     }
     this.step++;

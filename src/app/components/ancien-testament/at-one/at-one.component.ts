@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Question } from '../../ui/check-list/check-list.component';
 
 @Component({
   selector: 'app-at-one',
@@ -7,23 +8,30 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class AtOneComponent implements OnInit {
   @Output() next = new EventEmitter<number>()
-  judaisme = false;
-  christrianisme = false;
-  islam = false;
-  hindouisme = false;
+
+  readonly questions: Question[] = [{
+    label: 'Judaïsme',
+    attended: true,
+  },
+  {
+    label: 'Christrianisme',
+    attended: true,
+  },
+  {
+    label: 'Islam',
+    attended: false
+  },
+  {
+    label: 'Hindouisme',
+    attended: false
+  }
+]
+
 
   score?: number = undefined;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  validate(): void {
-    if (this.judaisme && this.christrianisme) {
-      this.score = 1;
-    } else {
-      this.score = 0;
-    }
   }
 }
