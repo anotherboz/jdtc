@@ -23,6 +23,7 @@ import { CheckListComponent } from './components/ui/check-list/check-list.compon
 import { ValidateComponent } from './components/ui/validate/validate.component';
 import { PictureListComponent } from './components/ui/picture-list/picture-list.component';
 import { AtThreeComponent } from './components/ancien-testament/at-three/at-three.component';
+import { AtFourComponent } from './components/ancien-testament/at-four/at-four.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AtThreeComponent } from './components/ancien-testament/at-three/at-thre
     ValidateComponent,
     PictureListComponent,
     AtThreeComponent,
+    AtFourComponent,
   ],
   imports: [
     AppRoutingModule,

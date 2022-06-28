@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">L'ancien testament</h5>
+  <div>De quand date le début de l'écriture de l'ancien testament ?</div>
+      <app-check-list [questions]="questions" (score)="score = $event"></app-check-list>
+  <div *ngIf="score !== undefined">
+    <p class="mt-5">
+      L’ancien testament reprend en grande partie la Bible hébraïque qui est constituée de la Torah (la Loi), les Prophètes et les Écrits.
+    <p>
+      Il est écrit entre le 8ème siècle avant J-C et le 2ème siècle après J-C.
+    </p>
+    <p>
+      Il contient le texte des origines, des textes législatifs, des récits historiques, des poèmes et des textes sapientiaux (de sagesse).
+      Il constitue 78% du volume de la Bible.
+    </p>
+    <p class="m-5">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

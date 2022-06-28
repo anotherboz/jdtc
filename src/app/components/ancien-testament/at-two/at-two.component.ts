@@ -12,7 +12,7 @@ export class AtTwoComponent implements OnInit {
   questions: Question[] = [
     {
       label: 'Canon',
-      attended: false,
+      attended: true,
       url: 'assets/canon.png'
     },
     {
