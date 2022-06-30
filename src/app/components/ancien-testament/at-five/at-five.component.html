@@ -1,0 +1,25 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">La Bible</h5>
+  <div>La genèse est le premier "Livre" de l'ancien testament. Quels sont les
+    histoires qu'elle raconte ?</div>
+      <app-check-list [questions]="questions" (score)="score = $event"></app-check-list>
+  <div *ngIf="score !== undefined" class="text-start m-lg-5">
+    <p class="mt-5">
+      Raconte de la création du monde, du jardin d’Eden, du déluge, des Patriarches (ancêtres des juifs qui vivaient 400 ans) …
+    </p>
+    <p>
+      Ensuite les passages célèbres sont : la vie d’Abraham, qui vecu très vieux, qui eu un fils Isaac alors que sa femme Sara avait 100 ans. Dieu lui fait une farce en lui demandant de sacrifier son fils sur une montagne.
+    </p>
+    <p>
+      La genèse se termine avec la vie des descendants d’Abraham.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

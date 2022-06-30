@@ -24,6 +24,10 @@ import { ValidateComponent } from './components/ui/validate/validate.component';
 import { PictureListComponent } from './components/ui/picture-list/picture-list.component';
 import { AtThreeComponent } from './components/ancien-testament/at-three/at-three.component';
 import { AtFourComponent } from './components/ancien-testament/at-four/at-four.component';
+import { AtFiveComponent } from './components/ancien-testament/at-five/at-five.component';
+import { AtSixComponent } from './components/ancien-testament/at-six/at-six.component';
+import { AtSevenComponent } from './components/ancien-testament/at-seven/at-seven.component';
+import { AtHeightComponent } from './components/ancien-testament/at-height/at-height.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { AtFourComponent } from './components/ancien-testament/at-four/at-four.c
     PictureListComponent,
     AtThreeComponent,
     AtFourComponent,
+    AtFiveComponent,
+    AtSixComponent,
+    AtSevenComponent,
+    AtHeightComponent,
   ],
   imports: [
     AppRoutingModule,

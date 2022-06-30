@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AutoRouteService } from 'src/app/services/auto-route.service';
+import { Stats, StatsService } from 'src/app/services/stats.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,35 +8,11 @@ import { AutoRouteService } from 'src/app/services/auto-route.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  stats: Stats;
 
-  stats = {
-    ancienTestament: {
-      point: 5
-    },
-    nouveauTestament: {
-      point: undefined
-    },
-    messe: {
-      point: undefined
-    },
-    organisation: {
-      point: undefined
-    },
-    communaute: {
-      point: undefined
-    },
-    histoire: {
-      point: undefined
-    },
-    saints: {
-      point: undefined
-    },
-    autreReligions: {
-      point: undefined
-    },
+  constructor(public route: AutoRouteService, stats: StatsService) {
+    this.stats = stats.stats;
   }
-
-  constructor(public route: AutoRouteService) { }
 
   ngOnInit(): void {
   }

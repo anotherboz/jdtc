@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Adam, Eve et les gamins</h5>
+  <div>Pourquoi Adam et Eve ont-ils été chassé du jardin d'Eden ?</div>
+      <app-check-list [questions]="questions" (score)="score = $event"></app-check-list>
+  <div *ngIf="score !== undefined" class="text-start m-lg-5">
+    <p class="mt-5">
+      Les 3 pages qui suivent la création du monde racontent l’histoire d’Adam et Eve, du jardin d’Eden, de la pomme et du serpent. De Caïn qui tue Abel et Seth qui a une nombreuse descendance.
+    </p>
+    <p>
+      Ce que la plupart des gens connaissent de l’ancien testament tient en 5 pages.
+    </p>
+    <p>
+    Votre mission : lire ces 5 pages.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

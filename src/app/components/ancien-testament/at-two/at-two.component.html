@@ -4,11 +4,11 @@
 
   <app-picture-list [questions]="questions" (score)="score = $event"></app-picture-list>
 
-  <div *ngIf="score !== undefined">
+  <div *ngIf="score !== undefined" class="m-lg-5">
     <p class="mt-5">
       La Bible est un ensemble de textes sacrés pour les juifs et les chrétiens.
     </p>
-    <p class="m-5">
+    <p class="m-5 text-center">
       <button
         class="btn btn-primary rounded-pill py-2 px-5"
         (click)="next.emit(score)"
