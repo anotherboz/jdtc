@@ -18,8 +18,10 @@ export class CrucifixComponent implements OnInit {
     this.letters = this.word.split('').map(l => ({letter: l, found: false }))
   }
 
-  @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
+  // @HostListener('document:keypress', ['$event'])
+  // handleKeyboardEvent(event: KeyboardEvent) {
+
+  pressed(event: KeyboardEvent) {
     const key = event.key;
     console.log(key);
     if (this.done) {

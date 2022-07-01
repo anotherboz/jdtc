@@ -1,19 +1,26 @@
-.line {
-  height: 200px;
+  // height: 200px;
   .letter {
     font-family: monospace;
   }
 
   img {
-    height: 200px;
+    height: 160px;
   }
-}
 
-input {
-  top: 10px;
-  left: 10px;
-  position: absolute;
-  z-index: -1;
-  width: 1em;
+.input-hidder {
+  background-color: black;
+  width: 5em;
+  height: 5em;
+
+  input {
+    left: 4px;
+    top: 4px;
+    color: black;
+    background-color: black;
+    border-color: black;
+    position: absolute;
+    z-index: -1;
+    width: 1em;
+  }
 }
 
