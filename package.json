@@ -18,10 +18,10 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "@capacitor/keyboard": "^1.2.3",
     "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "bootstrap": "^5.1.3",
     "rxjs": "~7.5.0",
+    "simple-keyboard": "^3.4.120",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

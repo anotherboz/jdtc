@@ -16,7 +16,8 @@
     </ng-container>
   </div>
 </div>
-<!-- <div class="input-hidder position-relative">
-  <input autofocus (keypress)="pressed($event)">
-</div> -->
+<div *ngIf="!done" class="text-center d-block d-lg-none">
+  <div class="simple-keyboard"></div>
+</div>
+
 <app-result [score]="result" class="m-3"></app-result>
