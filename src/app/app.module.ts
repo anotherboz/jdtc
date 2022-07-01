@@ -28,6 +28,7 @@ import { AtFiveComponent } from './components/ancien-testament/at-five/at-five.c
 import { AtSixComponent } from './components/ancien-testament/at-six/at-six.component';
 import { AtSevenComponent } from './components/ancien-testament/at-seven/at-seven.component';
 import { AtHeightComponent } from './components/ancien-testament/at-height/at-height.component';
+import { AutofocusDirective } from './components/ui/autofocus.directive';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AtHeightComponent } from './components/ancien-testament/at-height/at-he
     AtSixComponent,
     AtSevenComponent,
     AtHeightComponent,
+    AutofocusDirective,
   ],
   imports: [
     AppRoutingModule,

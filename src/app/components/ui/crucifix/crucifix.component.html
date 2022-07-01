@@ -1,9 +1,11 @@
 <div class="mt-5">
   <div class="d-block d-lg-inline-block m-5 text-center">
-    <span class="fs-1 mx-2 border-bottom letter text-center" style="width: 4em;" *ngFor="let letter of letters">{{letter.found ? letter.letter : '&#160;'}}</span>
+    <span class="fs-1 mx-2 border-bottom letter text-center" style="width: 4em;"
+       *ngFor="let letter of letters">{{letter.found ? letter.letter : '&#160;'}}</span>
     <span class="mx-4">&nbsp;</span>
   </div>
-  <div class="d-block d-lg-inline-block">
+  <div class="d-block d-lg-inline-block position-relative">
+    <input autofocus>
     <ng-container [ngSwitch]="step">
       <img *ngSwitchCase="1" src="assets/crx1.png">
       <img *ngSwitchCase="2" src="assets/crx2.png">

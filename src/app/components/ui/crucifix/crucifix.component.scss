@@ -8,3 +8,12 @@
     height: 200px;
   }
 }
+
+input {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  z-index: -1;
+  width: 1em;
+}
+
