@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Keyboard } from '@capacitor/keyboard';
 
 @Component({
   selector: 'app-crucifix',
@@ -15,13 +16,12 @@ export class CrucifixComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.letters = this.word.split('').map(l => ({letter: l, found: false }))
+    this.letters = this.word.split('').map(l => ({letter: l, found: false }));
+    Keyboard.show();
   }
 
-  // @HostListener('document:keypress', ['$event'])
-  // handleKeyboardEvent(event: KeyboardEvent) {
-
-  pressed(event: KeyboardEvent) {
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
     const key = event.key;
     console.log(key);
     if (this.done) {
