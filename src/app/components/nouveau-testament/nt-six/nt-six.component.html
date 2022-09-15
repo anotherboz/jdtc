@@ -1,0 +1,43 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Saint Luc</h5>
+  <div>Quel animal représente Luc ?</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5"></p>
+    <p>
+      L’évangile selon Saint Luc commence dans un temple où il arrive que l’on
+      sacrifie des taureaux. Luc est le seul évangéliste à n’être pas né juif.
+      C’était un compagnon de Saint Paul (Apôtre). Le dernier des synoptiques
+      est plus universaliste que les 2 autres. La généalogie de Jésus remonte à
+      Adam. Le chant des anges qui annoncent la naissance de ce Sauveur est :
+      Paix sur la terre ! bonne volonté envers les hommes. Nouveauté : le
+      message de Jésus n’est pas destiné à sauver le peuple juif mais tous les
+      humains.
+    </p>
+    <p>
+      L’évangile, très original (puisqu’il fait partie des 3 qui se ressemblent)
+      est découpé de la façon suivante :
+    </p>
+    <ul>
+      <li>Introduction</li>
+      <li>Le ministère galiléen</li>
+      <li>De la Galilée à Jérusalem</li>
+      <li>La semaine sainte</li>
+    </ul>
+    L’explication du taureau est particulièrement tordue, mais le taureau était
+    un animal important dans le culte de Mithras : un culte à mystères et
+    relativement secret qui était pratiqué à l’époque des premiers chrétiens.
+
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">La crucifixion</h5>
+  <div>Où à lieu la crucifixion ?</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5"></p>
+    <p>
+      Jésus est arrêté durant la nuit du jeudi au vendredi. Il est condamné
+      pendant la nuit et il doit être crucifié rapidement avant le samedi car le
+      samedi personne ne doit travailler, même le bourreau. Il porte sa croix
+      jusqu’au Golgotha et il est crucifié entre les deux larrons. Avant de
+      mourir il prononce les paroles : “Père, pourquoi m'as tu abandonné ?”
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

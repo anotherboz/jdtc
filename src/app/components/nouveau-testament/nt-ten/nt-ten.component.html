@@ -1,0 +1,40 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Le baptême de Jésus</h5>
+  <div>
+    Jésus a été baptisé dans le jourdain par Saint Jean-Baptiste. Quel lien
+    relie ces deux personnages ? Ils sont
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      « Et voici, Élisabeth, ta parente, elle aussi, a conçu un fils en sa
+      vieillesse ; et c’est ici le sixième mois pour celle qui était appelée
+      stérile » — Lc 1, 36
+    </p>
+    <p>
+      « En ces jours-là, Marie se mit en route rapidement vers une ville de la
+      montagne de Judée. Elle entra dans la maison de Zacharie et salua
+      Élisabeth [mère de Saint Jean-Baptiste]. Or, quand Élisabeth entendit la
+      salutation de Marie, l’enfant tressaillit en elle. Alors, Élisabeth fut
+      remplie de l’Esprit Saint, et s’écria d’une voix forte: “Tu es bénie entre
+      toutes les femmes, et le fruit de tes entrailles est béni ! » — Lc 1,
+      39-42
+    </p>
+    <p>
+      Dans le roman “L’homme qui devint Dieu”, Gérald Messadie (à lire !)
+      raconte que Jean-Baptiste et Jésus sont entrés dans la secte essénienne de
+      Qûmran. Cela ne semble pas avoir de réalité historique.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

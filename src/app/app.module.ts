@@ -29,6 +29,26 @@ import { AtSixComponent } from './components/ancien-testament/at-six/at-six.comp
 import { AtSevenComponent } from './components/ancien-testament/at-seven/at-seven.component';
 import { AtHeightComponent } from './components/ancien-testament/at-height/at-height.component';
 import { AutofocusDirective } from './components/ui/autofocus.directive';
+import { NtOneComponent } from './components/nouveau-testament/nt-one/nt-one.component';
+import { NtTwoComponent } from './components/nouveau-testament/nt-two/nt-two.component';
+import { NtThreeComponent } from './components/nouveau-testament/nt-three/nt-three.component';
+import { NtFourComponent } from './components/nouveau-testament/nt-four/nt-four.component';
+import { NtFiveComponent } from './components/nouveau-testament/nt-five/nt-five.component';
+import { NtSixComponent } from './components/nouveau-testament/nt-six/nt-six.component';
+import { NtSevenComponent } from './components/nouveau-testament/nt-seven/nt-seven.component';
+import { NtHeightComponent } from './components/nouveau-testament/nt-height/nt-height.component';
+import { NtNineComponent } from './components/nouveau-testament/nt-nine/nt-nine.component';
+import { NtTenComponent } from './components/nouveau-testament/nt-ten/nt-ten.component';
+import { NtElevenComponent } from './components/nouveau-testament/nt-eleven/nt-eleven.component';
+import { NtTwelveComponent } from './components/nouveau-testament/nt-twelve/nt-twelve.component';
+import { NtThristeenComponent } from './components/nouveau-testament/nt-thristeen/nt-thristeen.component';
+import { NtFourteenComponent } from './components/nouveau-testament/nt-fourteen/nt-fourteen.component';
+import { NtFiveteenComponent } from './components/nouveau-testament/nt-fiveteen/nt-fiveteen.component';
+import { NtSixteenComponent } from './components/nouveau-testament/nt-sixteen/nt-sixteen.component';
+import { NtSeventeenComponent } from './components/nouveau-testament/nt-seventeen/nt-seventeen.component';
+import { NtHeighteenComponent } from './components/nouveau-testament/nt-heighteen/nt-heighteen.component';
+import { NtNineteenComponent } from './components/nouveau-testament/nt-nineteen/nt-nineteen.component';
+import { NtTwentyComponent } from './components/nouveau-testament/nt-twenty/nt-twenty.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +76,26 @@ import { AutofocusDirective } from './components/ui/autofocus.directive';
     AtSevenComponent,
     AtHeightComponent,
     AutofocusDirective,
+    NtOneComponent,
+    NtTwoComponent,
+    NtThreeComponent,
+    NtFourComponent,
+    NtFiveComponent,
+    NtSixComponent,
+    NtSevenComponent,
+    NtHeightComponent,
+    NtNineComponent,
+    NtTenComponent,
+    NtElevenComponent,
+    NtTwelveComponent,
+    NtThristeenComponent,
+    NtFourteenComponent,
+    NtFiveteenComponent,
+    NtSixteenComponent,
+    NtSeventeenComponent,
+    NtHeighteenComponent,
+    NtNineteenComponent,
+    NtTwentyComponent,
   ],
   imports: [
     AppRoutingModule,

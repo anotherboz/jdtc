@@ -1,0 +1,40 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Saint Jean</h5>
+  <div>Quel animal représente Jean ?</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5"></p>
+    <p>
+      L’explication, ou le moyen mnémotechnique pour le retenir, c'est que Jean
+      prend de la hauteur. L’évangile de Jean est écrit de façon plus poétique
+      que les autres. Il a aussi une analyse plus philosophique, plus
+      théologique. Bref il est plus compliqué ce qui en fait certainement le
+      plus intéressant pour ceux qui se passionnent pour la Bible. L’histoire
+      c’est toujours la même : miracles, discours, déplacements (qui se
+      répètent) et ça finit toujours de la même façon. Mais dans Jean il y a
+      (beaucoup) moins de miracles et de déplacements et plus de discours
+      centrés sur la relation entre Dieu et Jésus (là où les synoptiques
+      insistent sur Dieu et le royaume de Dieu).
+    </p>
+    <p>
+      Actuellement on pense (majoritairement) que cet évangile n’a pas été écrit
+      par un seul auteur mais par “l’école johannique”
+    </p>
+    <p>
+      La première phrase de l'évangile selon Saint Jean c’est : “Au commencement
+      était le Verbe, et le Verbe était avec Dieu, et le Verbe était Dieu”, vous
+      avez 6 mois pour faire une dissertation.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Le sermon...</h5>
+  <div>
+    D’après Matthieu (chapitres 5-6-7) l’un des premiers sermons de Jésus a eu
+    lieu
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      Le sermon sur la montagne est le plus long sermon de toute la bible. Il
+      comporte entre autres Les béatitudes et le Notre Père. On y trouve aussi
+      la célèbre phrase “si quelqu'un te gifle sur la joue droite, tends-lui
+      aussi l'autre” et la Règle d'or du judaïsme présente dans le Lévitique (Lv
+      19,18) : « Tu aimeras ton prochain comme toi-même. »
+    </p>
+
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

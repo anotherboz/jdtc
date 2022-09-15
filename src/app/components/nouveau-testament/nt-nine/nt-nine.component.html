@@ -1,0 +1,32 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">La naissance de Jésus</h5>
+  <div>Jésus est né à :</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      « En ces jours-là, parut un édit de l’empereur, ordonnant de recenser
+      toute la terre - ce premier recensement eut lieu lorsque Quirinius était
+      gouverneur de Syrie. Et chacun allait se faire inscrire dans sa ville
+      d'origine. Joseph, lui aussi, quitta la ville de Nazareth en Galilée, pour
+      monter en Judée, à la ville de David appelée Bethléem, car il était de la
+      maison et de la descendance de David. Il venait se faire inscrire avec
+      Marie, son épouse, qui était enceinte. Or, pendant qu’ils étaient là,
+      arrivèrent les jours où elle devait enfanter. Et elle mit au monde son
+      fils premier-né; elle l’emmaillota et le coucha dans une mangeoire, car il
+      n’y avait pas de place pour eux dans la salle commune »
+    </p>
+    <p>— Lc 2,1-7</p>
+
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

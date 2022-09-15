@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { StatsService } from 'src/app/services/stats.service';
 
 @Component({
   selector: 'app-nouveau-testament',
@@ -6,22 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nouveau-testament.component.scss']
 })
 export class NouveauTestamentComponent implements OnInit {
-  questions = [{
-    label: 'question 1',
-    attended: true
-  },{
-    label: 'question 2',
-    attended: true
-  },{
-    label: 'question 3',
-    attended: false
-  },{
-    label: 'question 4',
-    attended: false
-  }]
-  constructor() { }
+  score = 0;
+  step = 0;
+  stepCount = 8;
+
+  constructor(private router: Router, private stats: StatsService) { }
 
   ngOnInit(): void {
   }
 
+  next(point?: number){
+    if (point) {
+      this.score += point;
+    }
+    this.step++;
+    if (this.step > 8) {
+      this.stats.ancienTestament = this.score;
+      this.router.navigate(['menu']);
+    }
+  }
 }

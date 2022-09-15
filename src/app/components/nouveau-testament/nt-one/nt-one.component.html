@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Evangiles</h5>
+  <div>Le mot Evangile signifie :</div>
+      <app-check-list [questions]="questions" (score)="score = $event"></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      Dans les premiers temps de la chrétienté, il fallait lire (ou se faire lire) les évangiles pour apprendre la vie de Jésus avant de pouvoir être baptisé.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

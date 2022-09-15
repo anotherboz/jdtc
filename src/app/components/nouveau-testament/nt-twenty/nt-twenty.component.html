@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Ascension</h5>
+  <div>Combien de jours après Pâques l’ascension a-t-elle lieu ?</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      “Et le Seigneur Jésus, après leur avoir parlé, fut enlevé dans le ciel, et
+      il s’assit à la droite de Dieu.” Marc 16, 19.
+    </p>
+    <p>
+      “Et il les mena dehors, jusque Béthanie, et, élevant ses mains, il les
+      bénit.
+    </p>
+    <p>
+      Et il arriva, pendant qu’il les bénissait, qu’il se sépara d’avec eux.”
+      Luc 24, 50-51
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

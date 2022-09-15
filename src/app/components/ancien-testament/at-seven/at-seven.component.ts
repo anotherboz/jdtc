@@ -16,7 +16,7 @@ export class AtSevenComponent implements OnInit {
   },
   {
     label: 'Eve a manger la pomme de la connaissance',
-    attended: false
+    attended: true
   },
   {
     label: 'La pomme en question ça symbolise le sexe',

@@ -1,0 +1,31 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Saint Marc</h5>
+  <div>Quel animal représente Marc ?</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5"></p>
+    <p>
+      L’évangile selon Saint Marc commence par “Voix de celui qui crie dans le
+      désert”, d’où le Lion. C’est le plus bref des 4 évangiles (26 pages). Il
+      est découpé en deux parties : La première démontre à l’aide de miracles et
+      de discours que Jésus est le fils de Dieu. La seconde raconte le chemin
+      vers la mort puis la résurrection.
+    </p>
+    <p>
+      Il est admis que l’évangile de Marc a été utilisé comme modèle par
+      Matthieu et Luc.
+    </p>
+
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>
