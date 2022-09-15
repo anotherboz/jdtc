@@ -1,10 +1,17 @@
 <div class="text-center">
   <h5 class="text-secondary m-3">Combien y a-t-il d’évangiles ?</h5>
-  <div>Comment appelle-t-on le regroupement des textes sacrés ?</div>
-  <app-check-list [questions]="questions" (score)="score = $event"></app-check-list>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
   <div *ngIf="score !== undefined" class="m-lg-5">
     <p class="mt-5">
-      Il existe une vingtaine d’évangiles. 4 sont canoniques, les autres sont apocryphes c'est-à-dire “dont l’authenticité n’est pas établie”. Le canon biblique a été établi lors du concile de Trente (1545-1563). Mais les autres évangiles contiennent des informations qui sont fixées dans la tradition catholique : l’existence de Sainte Anne (la mère de Marie), la présence de l'âne et du bœuf dans la crèche…
+      Il existe une vingtaine d’évangiles. 4 sont canoniques, les autres sont
+      apocryphes c'est-à-dire “dont l’authenticité n’est pas établie”. Le canon
+      biblique a été établi lors du concile de Trente (1545-1563). Mais les
+      autres évangiles contiennent des informations qui sont fixées dans la
+      tradition catholique : l’existence de Sainte Anne (la mère de Marie), la
+      présence de l'âne et du bœuf dans la crèche…
     </p>
     <p class="m-5 text-center">
       <button

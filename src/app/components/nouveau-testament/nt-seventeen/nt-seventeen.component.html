@@ -2,24 +2,28 @@
   <h5 class="text-secondary m-3">L’arrestation et le procès</h5>
   <div class="m-lg-5">
     <p class="mt-5">Comment s’appelle le tribunal juif qui condamne Jésus ?</p>
-    <p>
-      Une foule armée vient arrêter Jésus alors qu’il priait. Ses disciples
-      s’enfuient. Pierre suit Jésus de loin et par trois fois il le renie avant
-      le deuxième chant du coq.
-    </p>
-    <p>
-      Jésus est d’abord jugé par le Sanhédrin (tribunal Juif) qui le condamne
-      pour crime religieux, mais comme ils n’ont pas le droit de condamner à
-      mort, ils le défèrent devant Ponce Pilate qui le condamne à mort pour une
-      raison politique (pour éviter une émeute dans Jérusalem).
-    </p>
-    <p class="m-5 text-center">
-      <button
-        class="btn btn-primary rounded-pill py-2 px-5"
-        (click)="next.emit(0)"
-      >
-        Suivant
-      </button>
-    </p>
+    <app-crucifix word="SANHEDRIN" (score)="score = $event"></app-crucifix>
+
+    <div *ngIf="score !== undefined" class="text-start m-lg-5">
+      <p>
+        Une foule armée vient arrêter Jésus alors qu’il priait. Ses disciples
+        s’enfuient. Pierre suit Jésus de loin et par trois fois il le renie
+        avant le deuxième chant du coq.
+      </p>
+      <p>
+        Jésus est d’abord jugé par le Sanhédrin (tribunal Juif) qui le condamne
+        pour crime religieux, mais comme ils n’ont pas le droit de condamner à
+        mort, ils le défèrent devant Ponce Pilate qui le condamne à mort pour
+        une raison politique (pour éviter une émeute dans Jérusalem).
+      </p>
+      <p class="m-5 text-center">
+        <button
+          class="btn btn-primary rounded-pill py-2 px-5"
+          (click)="next.emit(0)"
+        >
+          Suivant
+        </button>
+      </p>
+    </div>
   </div>
 </div>

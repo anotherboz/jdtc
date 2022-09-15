@@ -5,25 +5,24 @@ import { StatsService } from 'src/app/services/stats.service';
 @Component({
   selector: 'app-nouveau-testament',
   templateUrl: './nouveau-testament.component.html',
-  styleUrls: ['./nouveau-testament.component.scss']
+  styleUrls: ['./nouveau-testament.component.scss'],
 })
 export class NouveauTestamentComponent implements OnInit {
   score = 0;
   step = 0;
-  stepCount = 8;
+  stepCount = 20;
 
-  constructor(private router: Router, private stats: StatsService) { }
+  constructor(private router: Router, private stats: StatsService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  next(point?: number){
+  next(point?: number) {
     if (point) {
       this.score += point;
     }
     this.step++;
-    if (this.step > 8) {
-      this.stats.ancienTestament = this.score;
+    if (this.step > 20) {
+      this.stats.nouveauTestament = this.score;
       this.router.navigate(['menu']);
     }
   }

@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-nt-seventeen',
@@ -7,8 +14,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class NtSeventeenComponent implements OnInit {
   @Output() next = new EventEmitter<number>();
+  @ViewChild('#inp') input?: ElementRef;
+
+  score?: number = undefined;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.input?.nativeElement.focus();
+  }
 }
