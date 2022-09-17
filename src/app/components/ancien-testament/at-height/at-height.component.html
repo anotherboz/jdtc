@@ -2,23 +2,33 @@
   <h5 class="text-secondary m-3">Exode</h5>
   <div>Choisit l'image sur laquelle on ne voit <b>pas</b> Moïse</div>
 
-  <app-picture-list [questions]="questions" (score)="score = $event"></app-picture-list>
+  <app-picture-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-picture-list>
 
   <div *ngIf="score !== undefined" class="text-start m-lg-5">
     <p class="mt-5">
-      Le deuxième “livre” de la Bible s’appelle l’exode. Il explique comment les descendant d’Abraham ont été réduit en esclavage et comment Moïse sauve tout le monde.
-      Au passage Moïse signifie "Sauvé des eaux".
+      Le deuxième «livre» de la Bible s’appelle l’exode. Il explique comment les
+      descendant d’Abraham ont été réduit en esclavage et comment Moïse sauve
+      tout le monde. Au passage Moïse signifie "Sauvé des eaux".
     </p>
     <p>
-      Yahvé (petit nom de Dieu dans l’ancien testament) donne la table de la loi à Moïse qui a une longue descendance…
+      Yahvé (petit nom de Dieu dans l’ancien testament) donne la table de la loi
+      à Moïse qui a une longue descendance…
     </p>
     <p>
-      Les 1600 pages qui suivent, c'est très long, pas très amusant… Il faut quand même connaître les noms de certains chapitres pour pouvoir briller en société (et les parcourir) :
+      Les 1600 pages qui suivent, c'est très long, pas très amusant… Il faut
+      quand même connaître les noms de certains chapitres pour pouvoir briller
+      en société (et les parcourir) :
     </p>
     <ul>
       <li>Les psaumes (textes destinés à être chantés)</li>
-      <li>Le cantique des cantiques (poème sur l’amour supposé écrit par le roi Salomon)</li>
-      <li>L’ecclésiaste (“vanité des vanités, tout est vanité”)</li>
+      <li>
+        Le cantique des cantiques (poème sur l’amour supposé écrit par le roi
+        Salomon)
+      </li>
+      <li>L’ecclésiaste («vanité des vanités, tout est vanité»)</li>
       <li>Le livre des prophètes</li>
     </ul>
     <p class="m-5 text-center">
@@ -31,4 +41,3 @@
     </p>
   </div>
 </div>
-

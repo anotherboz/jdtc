@@ -9,7 +9,7 @@ export interface Question {
 @Component({
   selector: 'app-picture-list',
   templateUrl: './picture-list.component.html',
-  styleUrls: ['./picture-list.component.scss']
+  styleUrls: ['./picture-list.component.scss'],
 })
 export class PictureListComponent implements OnInit {
   @Input() questions?: Question[];
@@ -17,10 +17,9 @@ export class PictureListComponent implements OnInit {
   selected?: number;
   result?: number;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   select(i: number): void {
     if (this.questions === undefined) {
@@ -32,6 +31,15 @@ export class PictureListComponent implements OnInit {
     } else {
       this.result = 0;
     }
+    setTimeout(
+      () =>
+        window.scroll({
+          top: 400,
+          left: 0,
+          behavior: 'smooth',
+        }),
+      200
+    );
     this.score.emit(this.result);
   }
 }

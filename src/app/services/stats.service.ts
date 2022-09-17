@@ -2,80 +2,106 @@ import { Injectable } from '@angular/core';
 
 export interface Stats {
   ancienTestament: {
-    point?: number
-  },
+    point?: number;
+  };
   nouveauTestament: {
-    point?: number
-  },
+    point?: number;
+  };
   messe: {
-    point?: number
-  },
+    point?: number;
+  };
   organisation: {
-    point?: number
-  },
+    point?: number;
+  };
   communaute: {
-    point?: number
-  },
+    point?: number;
+  };
   histoire: {
-    point?: number
-  },
+    point?: number;
+  };
   saints: {
-    point?: number
-  },
+    point?: number;
+  };
   autreReligions: {
-    point?: number
-  }
+    point?: number;
+  };
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StatsService {
   currentStats: Stats = {
     ancienTestament: {
-      point: undefined
+      point: undefined,
     },
     nouveauTestament: {
-      point: undefined
+      point: undefined,
     },
     messe: {
-      point: undefined
+      point: undefined,
     },
     organisation: {
-      point: undefined
+      point: undefined,
     },
     communaute: {
-      point: undefined
+      point: undefined,
     },
     histoire: {
-      point: undefined
+      point: undefined,
     },
     saints: {
-      point: undefined
+      point: undefined,
     },
     autreReligions: {
-      point: undefined
+      point: undefined,
     },
+  };
+
+  get stats() {
+    return this.currentStats;
+  }
+  set ancienTestament(val: number) {
+    this.currentStats.ancienTestament.point = val;
+    this.save();
+  }
+  set nouveauTestament(val: number) {
+    this.currentStats.nouveauTestament.point = val;
+    this.save();
+  }
+  set messe(val: number) {
+    this.currentStats.messe.point = val;
+    this.save();
+  }
+  set organisation(val: number) {
+    this.currentStats.organisation.point = val;
+    this.save();
+  }
+  set communaute(val: number) {
+    this.currentStats.communaute.point = val;
+    this.save();
+  }
+  set histoire(val: number) {
+    this.currentStats.histoire.point = val;
+    this.save();
+  }
+  set saints(val: number) {
+    this.currentStats.saints.point = val;
+    this.save();
+  }
+  set autreReligions(val: number) {
+    this.currentStats.autreReligions.point = val;
+    this.save();
   }
 
-  get stats() { return this.currentStats; }
-  set ancienTestament(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set nouveauTestament(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set messe(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set organisation(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set communaute(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set histoire(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set saints(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-  set autreReligions(val: number)  { this.currentStats.ancienTestament.point = val; this.save();}
-
   constructor() {
-    let stats = localStorage.getItem("stats")
+    let stats = localStorage.getItem('stats');
     if (stats) {
       this.currentStats = JSON.parse(stats);
     }
   }
 
   save(): void {
-    localStorage.setItem("stats", JSON.stringify(this.currentStats))
+    localStorage.setItem('stats', JSON.stringify(this.currentStats));
   }
 }
