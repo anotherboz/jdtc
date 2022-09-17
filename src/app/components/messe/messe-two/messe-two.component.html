@@ -1,0 +1,29 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Le début de la messe</h5>
+  <div>
+    <p>
+      Le prêtre commence la messe par vénérer l’autel qui, dans les premiers
+      temps, était le tombeau d’un martyr . Encore aujourd’hui, l’autel renferme
+      des reliques.
+    </p>
+    <p>
+      Ensuite, le prêtre prononce la phrase “Au nom du père, du fils et du Saint
+      Esprit” pendant que l’assistance se signe et répond Amen.
+    </p>
+    Que signifie Amen ?
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

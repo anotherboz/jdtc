@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">La messe du Dimanche</h5>
+  <div>
+    Les premiers chrétiens ont décidé de célébrer la messe le dimanche car :
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      Le dimanche est le premier jour de la semaine, celui qui suit le sabbat et
+      c’est le jour de la résurrection, l’évènement le plus important de la
+      religion chrétienne. Le nom Messe vient de la formule qui était prononcée
+      à la fin de la messe : “Ite missa est” qui se traduit en “Allez, c’est
+      l’envoi” pouvant vouloir dire : Allez vivre votre mission de chrétien dans
+      le monde (ou alors “c’est fini, cassez vous”).
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

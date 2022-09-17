@@ -1,0 +1,37 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Kyrie Eleison</h5>
+  <div>Le chant d’entrée de la messe est écrit en :</div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+</div>
+<div>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      Kyrie eleison est une phrase grecque qui signifie “seigneur prend pitié”.
+      Cette formule est attestée dans des documents du 6ème siècle.
+    </p>
+    <p>
+      En 598 Grégoire le Grand ajoute Christe eleison (Christ prends pitié) pour
+      en faire la phrase d’introduction de la messe.
+    </p>
+    <p>
+      Les chrétiens d’Orient utilisent cette phrase comme réponse dans les
+      litanies tout au long de la messe.
+    </p>
+    <p>
+      Après le Kyrie, le Gloria (sauf pendant l’avent ou le carême) qui est une
+      prière qui date du 4eme ou 5eme siècle.
+    </p>
+    <p>Le début de la messe invite les participants au recueillement.</p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

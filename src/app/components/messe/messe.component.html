@@ -1,1 +1,38 @@
-<p>messe works!</p>
+<p class="p-5">
+  <ngb-progressbar
+    *ngIf="step"
+    type="primary"
+    [value]="(100 * step) / stepCount"
+    height="10px"
+  ></ngb-progressbar>
+</p>
+
+<div [ngSwitch]="step">
+  <div class="text-center">
+    <div *ngSwitchCase="0">
+      <h5 class="text-secondary m-3">La messe</h5>
+      <img src="assets/cena.png" />
+      <p class="m-5">
+        <button class="btn btn-primary rounded-pill py-2 px-5" (click)="next()">
+          Commencer
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="1">
+    <app-messe-one (next)="next($event)"></app-messe-one>
+  </div>
+  <div *ngSwitchCase="2">
+    <app-messe-two (next)="next($event)"></app-messe-two>
+  </div>
+  <div *ngSwitchCase="3">
+    <app-messe-three (next)="next($event)"></app-messe-three>
+  </div>
+  <div *ngSwitchCase="4">
+    <app-messe-four (next)="next($event)"></app-messe-four>
+  </div>
+  <div *ngSwitchCase="5">
+    <app-messe-five (next)="next($event)"></app-messe-five>
+  </div>
+</div>

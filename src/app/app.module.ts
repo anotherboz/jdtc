@@ -49,6 +49,11 @@ import { NtSeventeenComponent } from './components/nouveau-testament/nt-seventee
 import { NtHeighteenComponent } from './components/nouveau-testament/nt-heighteen/nt-heighteen.component';
 import { NtNineteenComponent } from './components/nouveau-testament/nt-nineteen/nt-nineteen.component';
 import { NtTwentyComponent } from './components/nouveau-testament/nt-twenty/nt-twenty.component';
+import { MesseOneComponent } from './components/messe/messe-one/messe-one.component';
+import { MesseTwoComponent } from './components/messe/messe-two/messe-two.component';
+import { MesseThreeComponent } from './components/messe/messe-three/messe-three.component';
+import { MesseFourComponent } from './components/messe/messe-four/messe-four.component';
+import { MesseFiveComponent } from './components/messe/messe-five/messe-five.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +101,11 @@ import { NtTwentyComponent } from './components/nouveau-testament/nt-twenty/nt-t
     NtHeighteenComponent,
     NtNineteenComponent,
     NtTwentyComponent,
+    MesseOneComponent,
+    MesseTwoComponent,
+    MesseThreeComponent,
+    MesseFourComponent,
+    MesseFiveComponent,
   ],
   imports: [
     AppRoutingModule,

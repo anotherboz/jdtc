@@ -1,0 +1,38 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Liturgie de la parole</h5>
+  <div>
+    <p>
+      La première lecture est généralement un extrait de l’ancien testament.
+      Ensuite on chante ou lit un psaume. La seconde lecture est issue du
+      Nouveau Testament, des lettres des apôtres Pierre, Jacques, Jude et
+      surtout de Paul, ou un extrait de l’Apocalypse.
+    </p>
+    <p>
+      La dernière lecture est un extrait d’un évangile qui est acclamé par
+      Alleluia.
+    </p>
+    Alleluia signifie :
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      Le prêtre commente la dernière lecture dans une “homélie”.
+    </p>
+    <p>
+      L’assemblée entame le Credo et la prière universelle (pour le prêtre, la
+      communauté, les malades et le monde) pour conclure la première partie de
+      la messe.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>
