@@ -2,17 +2,22 @@
 
 <div class="row justify-content-center my-3 g-3">
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('ancien-testament')" [ngClass]="{ 'text-muted': stats.ancienTestament.point !== undefined }">
-      <img src="assets/moise.jpg" class="card-img-top" alt="moise">
+    <div
+      class="bg-dark card"
+      (click)="route.go('ancien-testament')"
+      [ngClass]="{ 'text-muted': stats.ancienTestament.point !== undefined }"
+    >
+      <img src="assets/moise.jpg" class="card-img-top" alt="moise" />
       <div class="card-body">
         <h5 class="card-title">L’ancien testament</h5>
         <p class="card-text">
-          La grosse partie de la bible qui raconte l'histoire du peuple d'Israel.
+          La grosse partie de la bible qui raconte l'histoire du peuple
+          d'Israel.
         </p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.ancienTestament.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -20,17 +25,26 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('nouveau-testament')" [ngClass]="{ 'text-muted': stats.nouveauTestament.point !== undefined }">
-      <img src="assets/jesus_capharnaum.png" class="card-img-top" alt="jesus_capharnaum">
+    <div
+      class="bg-dark card"
+      (click)="route.go('nouveau-testament')"
+      [ngClass]="{ 'text-muted': stats.nouveauTestament.point !== undefined }"
+    >
+      <img
+        src="assets/jesus_capharnaum.png"
+        class="card-img-top"
+        alt="jesus_capharnaum"
+      />
       <div class="card-body">
         <h5 class="card-title">Le nouveau testament</h5>
         <p class="card-text">
-          La life de Jesus : Miracles, discours, ballades, miracles, discours, ballades...
+          La life de Jesus : Miracles, discours, ballades, miracles, discours,
+          ballades...
         </p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.nouveauTestament.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -38,17 +52,22 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('messe')" [ngClass]="{ 'text-muted': stats.messe.point !== undefined }">
-      <img src="assets/cena.png" class="card-img-top" alt="cena">
+    <div
+      class="bg-dark card"
+      (click)="route.go('messe')"
+      [ngClass]="{ 'text-muted': stats.messe.point !== undefined }"
+    >
+      <img src="assets/cena.png" class="card-img-top" alt="cena" />
       <div class="card-body">
         <h5 class="card-title">La messe</h5>
         <p class="card-text">
-          Entre la fièvre du samedi soir et la sieste du dimanche matin : le rite religieux.
+          Entre la fièvre du samedi soir et la sieste du dimanche matin : le
+          rite religieux.
         </p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.messe.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -56,17 +75,19 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('organisation')" [ngClass]="{ 'text-muted': stats.organisation.point !== undefined }">
-      <img src="assets/vatican.jpg" class="card-img-top" alt="vatican">
+    <div
+      class="bg-dark card"
+      (click)="route.go('organisation')"
+      [ngClass]="{ 'text-muted': stats.organisation.point !== undefined }"
+    >
+      <img src="assets/vatican.jpg" class="card-img-top" alt="vatican" />
       <div class="card-body">
         <h5 class="card-title">Organisation et pouvoir</h5>
-        <p class="card-text">
-          Hiérarchie, ordres religieux, fonctionnement de l'église.
-        </p>
+        <p class="card-text">Hiérarchie, argent, scandale.</p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.organisation.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -74,8 +95,12 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('communaute')" [ngClass]="{ 'text-muted': stats.communaute.point !== undefined }">
-      <img src="assets/anneau.jpg" class="card-img-top" alt="anneau">
+    <div
+      class="bg-dark card"
+      (click)="route.go('communaute')"
+      [ngClass]="{ 'text-muted': stats.communaute.point !== undefined }"
+    >
+      <img src="assets/anneau.jpg" class="card-img-top" alt="anneau" />
       <div class="card-body">
         <h5 class="card-title">Communauté & valeurs</h5>
         <p class="card-text">
@@ -84,7 +109,7 @@
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.communaute.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -92,17 +117,22 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('histoire')" [ngClass]="{ 'text-muted': stats.histoire.point !== undefined }">
-      <img src="assets/martyrs.jpg" class="card-img-top" alt="martyrs">
+    <div
+      class="bg-dark card"
+      (click)="route.go('histoire')"
+      [ngClass]="{ 'text-muted': stats.histoire.point !== undefined }"
+    >
+      <img src="assets/martyrs.jpg" class="card-img-top" alt="martyrs" />
       <div class="card-body">
         <h5 class="card-title">Histoire chrétienne</h5>
         <p class="card-text">
-          Premiers chrétiens, schisme, croisades, hérésies, réforme et contre-réforme.
+          Premiers chrétiens, schisme, croisades, hérésies, réforme et
+          contre-réforme.
         </p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.histoire.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -110,17 +140,19 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('saints')" [ngClass]="{ 'text-muted': stats.saints.point !== undefined }">
-      <img src="assets/blandine.jpg" class="card-img-top" alt="blandine">
+    <div
+      class="bg-dark card"
+      (click)="route.go('saints')"
+      [ngClass]="{ 'text-muted': stats.saints.point !== undefined }"
+    >
+      <img src="assets/blandine.jpg" class="card-img-top" alt="blandine" />
       <div class="card-body">
         <h5 class="card-title">Saints et Symboles</h5>
-        <p class="card-text">
-          Pour pouvoir frimer devant les copains.
-        </p>
+        <p class="card-text">Pour pouvoir frimer devant les copains.</p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.saints.point as point; else demarrer">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>
@@ -128,17 +160,23 @@
   </div>
 
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="bg-dark card" (click)="route.go('autres-religions')" [ngClass]="{ 'text-muted': stats.autreReligions.point !== undefined }">
-      <img src="assets/pastafarisme.jpg" class="card-img-top" alt="pastafarisme">
+    <div
+      class="bg-dark card"
+      (click)="route.go('autres-religions')"
+      [ngClass]="{ 'text-muted': stats.autreReligions.point !== undefined }"
+    >
+      <img
+        src="assets/pastafarisme.jpg"
+        class="card-img-top"
+        alt="pastafarisme"
+      />
       <div class="card-body">
         <h5 class="card-title">Les autres religions</h5>
-        <p class="card-text">
-          Avant et après.
-        </p>
+        <p class="card-text">Avant et après.</p>
         <div class="text-end text-muted">
           &nbsp;
           <span *ngIf="stats.autreReligions.point as point">
-            {{point}} pts
+            {{ point }} pts
           </span>
         </div>
       </div>

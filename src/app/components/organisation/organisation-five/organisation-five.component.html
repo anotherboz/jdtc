@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Curés et diacres</h5>
+  <div>Quel est le nom de la cérémonie qui permet de devenir prêtre ?</div>
+  <app-crucifix word="ORDINATION" (score)="score = $event"></app-crucifix>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5 fst-italic">
+      « Le curé de la paroisse est le véritable pasteur de la paroisse qui lui a
+      été confiée. Il exerce la pastorale de la communauté qui lui est confiée
+      sous l'autorité de l'évêque diocésain, afin de remplir pour cette
+      communauté les fonctions d'enseignement, de sanctification et de
+      gouvernement (...) »
+    </p>
+    <p>
+      Les diacres sont ordonnés pour être au service direct des pauvres et des
+      nécessiteux. Ils peuvent remplacer le curé sauf pour l’eucharistie. Ce
+      sont les seuls membres de l’église qui peuvent être mariés (avant leurs
+      ordinations).
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

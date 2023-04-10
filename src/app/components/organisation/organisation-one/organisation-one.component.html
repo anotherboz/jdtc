@@ -1,0 +1,33 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Le Saint Père</h5>
+</div>
+<div>
+  <div>
+    <p>
+      Le Pape est l'évêque de Rome. Il est le successeur du premier évêque de
+      Rome : Saint Pierre Apôtre. Le vrai nom de Pierre est Siméon Bar-Yonah
+      (traduit par « Simon, fils de Jonas »), mais selon St Matthieu, Jésus a
+      dit :
+      <span class="fst-italic"
+        >« Pierre, tu es un roc, et sur cette pierre je bâtirai mon assemblée
+        »</span
+      >
+      (ekklésia, terme à l'origine du français église).
+    </p>
+    Le pape est :
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

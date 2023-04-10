@@ -1,0 +1,53 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">L’élection du Pape</h5>
+  <div>
+    Le pape est élu par un collège de 120 cardinaux qui se réunissent dans la
+    Chapelle Sixtine qui tient son nom :
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+</div>
+<div>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5 fst-italic">Dixit Wikipedia :</p>
+    <p>
+      Les cardinaux électeurs ont à leur disposition des bulletins de vote
+      rectangulaires comportant sur la partie supérieure l'inscription « Eligo
+      in Summum Pontificem ». Chaque cardinal inscrit le nom qu'il choisit dans
+      la partie inférieure. Il se dirige ensuite vers l'autel de la chapelle où
+      est placé un calice recouvert d'un plateau sur lequel il dépose son
+      bulletin plié en deux. Il prononce alors la formule : « Je prends à témoin
+      le Christ Seigneur, qui me jugera, que je donne ma voix à celui que, selon
+      Dieu, je juge devoir être élu », puis fait glisser son bulletin dans le
+      calice.
+    </p>
+    <p>
+      Dès que tous ont voté, les scrutateurs procèdent au décompte des voix. Une
+      fois dépouillés, les bulletins sont rassemblés à l'aide d'une aiguille le
+      long d'un fil. Si la majorité de deux tiers n'est pas atteinte, les
+      bulletins ainsi que les notes des cardinaux sont brûlés dans le poêle de
+      la chapelle Sixtine et un fumigène y est ajouté pour donner une fumée
+      noire. Un nouveau scrutin est organisé, aussi souvent que nécessaire
+      jusqu'à l'obtention de la majorité requise.
+    </p>
+    <p>
+      Dès que la majorité des deux tiers est atteinte, les bulletins de vote et
+      les notes des cardinaux sont alors brûlés dans le poêle de la chapelle de
+      façon à produire une fumée blanche. Le décompte des voix, remis au nouveau
+      pape, est ensuite conservé dans les archives du Vatican, dans une
+      enveloppe scellée qui ne peut être ouverte que par autorisation expresse
+      du pontife. L'élection est annoncée par les mots Habemus papam (« Nous
+      avons un pape ») à la foule réunie place Saint-Pierre.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

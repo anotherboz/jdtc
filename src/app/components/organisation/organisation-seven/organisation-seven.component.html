@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">CIASE</h5>
+  <div>
+    <p>
+      Le 5 octobre 2021 la Commission indépendante sur les abus sexuels dans
+      l'Église a rendu un rapport sur les viols et abus sexuels commis en France
+      par les représentants de l’église depuis 1950.
+    </p>
+    Cela concerne :
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      La commission estime qu'au moins 2,5 % à 2,8 % de prêtres et religieux ont
+      commis des agressions sexuelles ou des viols. Le rapport préconise 45
+      mesures pour mettre un terme à ces crimes.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Fin
+      </button>
+    </p>
+  </div>
+</div>

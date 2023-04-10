@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h5 class="text-secondary m-3">Les évêques</h5>
+  <div>
+    <p>
+      Les évêques sont nommés par le Pape. Ils sont soit évêques diocésains (en
+      charge d’un diocèse) soit titulaires (ils ont une fonction particulière).
+    </p>
+    L’église principale d’un diocèse est la cathédrale qui tire son nom :
+  </div>
+  <app-check-list
+    [questions]="questions"
+    (score)="score = $event"
+  ></app-check-list>
+  <div *ngIf="score !== undefined" class="m-lg-5">
+    <p class="mt-5">
+      Les évêques “dirigent le domaine”, ils gèrent les biens et dirigent les
+      prêtres. Leur couleur est le violet.
+    </p>
+    <p class="m-5 text-center">
+      <button
+        class="btn btn-primary rounded-pill py-2 px-5"
+        (click)="next.emit(score)"
+      >
+        Suivant
+      </button>
+    </p>
+  </div>
+</div>

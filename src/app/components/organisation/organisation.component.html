@@ -1,1 +1,44 @@
-<p>organisation works!</p>
+<p class="p-5">
+  <ngb-progressbar
+    *ngIf="step"
+    type="primary"
+    [value]="(100 * step) / stepCount"
+    height="10px"
+  ></ngb-progressbar>
+</p>
+
+<div [ngSwitch]="step">
+  <div class="text-center">
+    <div *ngSwitchCase="0">
+      <h5 class="text-secondary m-3">Organisation et pouvoir</h5>
+      <img src="assets/vatican.jpg" />
+      <p class="m-5">
+        <button class="btn btn-primary rounded-pill py-2 px-5" (click)="next()">
+          Commencer
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="1">
+    <app-organisation-one (next)="next($event)"></app-organisation-one>
+  </div>
+  <div *ngSwitchCase="2">
+    <app-organisation-two (next)="next($event)"></app-organisation-two>
+  </div>
+  <div *ngSwitchCase="3">
+    <app-organisation-three (next)="next($event)"></app-organisation-three>
+  </div>
+  <div *ngSwitchCase="4">
+    <app-organisation-four (next)="next($event)"></app-organisation-four>
+  </div>
+  <div *ngSwitchCase="5">
+    <app-organisation-five (next)="next($event)"></app-organisation-five>
+  </div>
+  <div *ngSwitchCase="6">
+    <app-organisation-six (next)="next($event)"></app-organisation-six>
+  </div>
+  <div *ngSwitchCase="7">
+    <app-organisation-seven (next)="next($event)"></app-organisation-seven>
+  </div>
+</div>

@@ -54,6 +54,13 @@ import { MesseTwoComponent } from './components/messe/messe-two/messe-two.compon
 import { MesseThreeComponent } from './components/messe/messe-three/messe-three.component';
 import { MesseFourComponent } from './components/messe/messe-four/messe-four.component';
 import { MesseFiveComponent } from './components/messe/messe-five/messe-five.component';
+import { OrganisationOneComponent } from './components/organisation/organisation-one/organisation-one.component';
+import { OrganisationTwoComponent } from './components/organisation/organisation-two/organisation-two.component';
+import { OrganisationThreeComponent } from './components/organisation/organisation-three/organisation-three.component';
+import { OrganisationFourComponent } from './components/organisation/organisation-four/organisation-four.component';
+import { OrganisationFiveComponent } from './components/organisation/organisation-five/organisation-five.component';
+import { OrganisationSixComponent } from './components/organisation/organisation-six/organisation-six.component';
+import { OrganisationSevenComponent } from './components/organisation/organisation-seven/organisation-seven.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +113,13 @@ import { MesseFiveComponent } from './components/messe/messe-five/messe-five.com
     MesseThreeComponent,
     MesseFourComponent,
     MesseFiveComponent,
+    OrganisationOneComponent,
+    OrganisationTwoComponent,
+    OrganisationThreeComponent,
+    OrganisationFourComponent,
+    OrganisationFiveComponent,
+    OrganisationSixComponent,
+    OrganisationSevenComponent,
   ],
   imports: [
     AppRoutingModule,
