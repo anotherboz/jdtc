@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'simple-keyboard/build/css/index.css';
+@import "simple-keyboard/build/css/index.css";
 .hg-theme-default .hg-button {
   color: black;
 }
@@ -16,53 +16,47 @@
 // $cyan: #8dace160;
 // $dark:#484554;
 
-
 @font-face {
-    font-family: 'corsiva';
-    src: url('/assets/font/corsiva.tff')
-    format('truetype');
+  font-family: "corsiva";
+  src: url("/assets/font/corsiva.tff") format("truetype");
 }
 
 @font-face {
-    font-family: 'smooch';
-    src: url('/assets/font/smooch.ttf')
-    format('truetype');
+  font-family: "smooch";
+  src: url("/assets/font/smooch.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'indie';
-    src: url('/assets/font/indie.ttf')
-    format('truetype');
+  font-family: "indie";
+  src: url("/assets/font/indie.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'lobster';
-    src: url('/assets/font/lobster.ttf')
-    format('truetype');
+  font-family: "lobster";
+  src: url("/assets/font/lobster.ttf") format("truetype");
 }
 
-$primary: #3C58CF;
-$secondary: #CFAA3C; // #6f42c1;
+$primary: #3c58cf;
+$secondary: #cfaa3c; // #6f42c1;
 $light: #3c57cf83;
 $body-color: #ffffffa6;
 $body-bg: #000;
 
 :root {
-    font-family: 'corsiva';
-    font-size: 16px;
+  font-family: "corsiva";
+  font-size: 16px;
 }
 
 // $font-family-base: 'corsiva';
 
-@import '~bootstrap/scss/bootstrap';
-
+@import "bootstrap/scss/bootstrap";
 
 h1 {
-    font-family: 'lobster';
+  font-family: "lobster";
 }
 
 h2 {
-    font-family: 'indie';
+  font-family: "indie";
 }
 
 .form-check-input {
@@ -72,7 +66,6 @@ h2 {
 .progress {
   background-color: var(--bs-light);
 }
-
 
 .card.selected {
   box-shadow: 0px 0px 13px var(--bs-primary);

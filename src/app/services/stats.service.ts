@@ -22,7 +22,7 @@ export interface Stats {
   saints: {
     point?: number;
   };
-  autreReligions: {
+  autresReligions: {
     point?: number;
   };
 }
@@ -53,7 +53,7 @@ export class StatsService {
     saints: {
       point: undefined,
     },
-    autreReligions: {
+    autresReligions: {
       point: undefined,
     },
   };
@@ -89,8 +89,8 @@ export class StatsService {
     this.currentStats.saints.point = val;
     this.save();
   }
-  set autreReligions(val: number) {
-    this.currentStats.autreReligions.point = val;
+  set autresReligions(val: number) {
+    this.currentStats.autresReligions.point = val;
     this.save();
   }
 

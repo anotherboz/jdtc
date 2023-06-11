@@ -20,25 +20,25 @@
     </div>
   </div>
 
-  <div *ngSwitchCase="1">
+  <div *ngSwitchCase="1" [@slideOutLeftOnLeave]>
     <app-organisation-one (next)="next($event)"></app-organisation-one>
   </div>
-  <div *ngSwitchCase="2">
+  <div *ngSwitchCase="2" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-organisation-two (next)="next($event)"></app-organisation-two>
   </div>
-  <div *ngSwitchCase="3">
+  <div *ngSwitchCase="3" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-organisation-three (next)="next($event)"></app-organisation-three>
   </div>
-  <div *ngSwitchCase="4">
+  <div *ngSwitchCase="4" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-organisation-four (next)="next($event)"></app-organisation-four>
   </div>
-  <div *ngSwitchCase="5">
+  <div *ngSwitchCase="5" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-organisation-five (next)="next($event)"></app-organisation-five>
   </div>
-  <div *ngSwitchCase="6">
+  <div *ngSwitchCase="6" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-organisation-six (next)="next($event)"></app-organisation-six>
   </div>
-  <div *ngSwitchCase="7">
+  <div *ngSwitchCase="7" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-organisation-seven (next)="next($event)"></app-organisation-seven>
   </div>
 </div>

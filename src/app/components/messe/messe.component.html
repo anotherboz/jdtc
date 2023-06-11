@@ -20,19 +20,19 @@
     </div>
   </div>
 
-  <div *ngSwitchCase="1">
+  <div *ngSwitchCase="1" [@slideOutLeftOnLeave]>
     <app-messe-one (next)="next($event)"></app-messe-one>
   </div>
-  <div *ngSwitchCase="2">
+  <div *ngSwitchCase="2" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-messe-two (next)="next($event)"></app-messe-two>
   </div>
-  <div *ngSwitchCase="3">
+  <div *ngSwitchCase="3" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-messe-three (next)="next($event)"></app-messe-three>
   </div>
-  <div *ngSwitchCase="4">
+  <div *ngSwitchCase="4" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-messe-four (next)="next($event)"></app-messe-four>
   </div>
-  <div *ngSwitchCase="5">
+  <div *ngSwitchCase="5" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-messe-five (next)="next($event)"></app-messe-five>
   </div>
 </div>

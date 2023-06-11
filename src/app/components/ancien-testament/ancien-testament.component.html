@@ -1,39 +1,47 @@
-<p class="p-5"><ngb-progressbar *ngIf="step" type="primary" [value]="100*step/stepCount" height="10px"></ngb-progressbar></p>
+<p class="p-5">
+  <ngb-progressbar
+    *ngIf="step"
+    type="primary"
+    [value]="(100 * step) / stepCount"
+    height="10px"
+  ></ngb-progressbar>
+</p>
 
 <div [ngSwitch]="step">
-
   <div class="text-center">
     <div *ngSwitchCase="0">
       <h5 class="text-secondary m-3">L'ancien testament</h5>
-      <img src="assets/moise.jpg">
+      <img src="assets/moise.jpg" />
       <p class="m-5">
-        <button class="btn btn-primary rounded-pill py-2 px-5" (click)="next()">Commencer</button>
+        <button class="btn btn-primary rounded-pill py-2 px-5" (click)="next()">
+          Commencer
+        </button>
       </p>
     </div>
   </div>
 
-  <div *ngSwitchCase="1">
+  <div *ngSwitchCase="1" [@slideOutLeftOnLeave]>
     <app-at-one (next)="next($event)"></app-at-one>
   </div>
-  <div *ngSwitchCase="2">
+  <div *ngSwitchCase="2" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-two (next)="next($event)"></app-at-two>
   </div>
-  <div *ngSwitchCase="3">
+  <div *ngSwitchCase="3" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-three (next)="next($event)"></app-at-three>
   </div>
-  <div *ngSwitchCase="4">
+  <div *ngSwitchCase="4" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-four (next)="next($event)"></app-at-four>
   </div>
-  <div *ngSwitchCase="5">
+  <div *ngSwitchCase="5" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-five (next)="next($event)"></app-at-five>
   </div>
-  <div *ngSwitchCase="6">
+  <div *ngSwitchCase="6" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-six (next)="next($event)"></app-at-six>
   </div>
-  <div *ngSwitchCase="7">
+  <div *ngSwitchCase="7" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-seven (next)="next($event)"></app-at-seven>
   </div>
-  <div *ngSwitchCase="8">
+  <div *ngSwitchCase="8" [@slideInRightOnEnter] [@slideOutLeftOnLeave]>
     <app-at-height (next)="next($event)"></app-at-height>
   </div>
 </div>

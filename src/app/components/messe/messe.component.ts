@@ -1,11 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {
+  slideInRightOnEnterAnimation,
+  slideOutLeftOnLeaveAnimation,
+} from 'angular-animations';
 import { StatsService } from 'src/app/services/stats.service';
 
 @Component({
   selector: 'app-messe',
   templateUrl: './messe.component.html',
   styleUrls: ['./messe.component.scss'],
+  animations: [
+    slideInRightOnEnterAnimation({ delay: 1000 }),
+    slideOutLeftOnLeaveAnimation(),
+  ],
 })
 export class MesseComponent implements OnInit {
   score = 0;

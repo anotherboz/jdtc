@@ -1,11 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {
+  slideInRightOnEnterAnimation,
+  slideOutLeftOnLeaveAnimation,
+} from 'angular-animations';
 import { StatsService } from 'src/app/services/stats.service';
 
 @Component({
   selector: 'app-organisation',
   templateUrl: './organisation.component.html',
   styleUrls: ['./organisation.component.scss'],
+  animations: [
+    slideInRightOnEnterAnimation({ delay: 1000 }),
+    slideOutLeftOnLeaveAnimation(),
+  ],
 })
 export class OrganisationComponent implements OnInit {
   score = 0;

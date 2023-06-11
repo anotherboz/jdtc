@@ -24,7 +24,7 @@ export class NtSixComponent implements OnInit {
     },
     {
       label: 'Un dragon',
-      attended: true,
+      attended: false,
     },
   ];
 

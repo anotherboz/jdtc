@@ -61,6 +61,7 @@ import { OrganisationFourComponent } from './components/organisation/organisatio
 import { OrganisationFiveComponent } from './components/organisation/organisation-five/organisation-five.component';
 import { OrganisationSixComponent } from './components/organisation/organisation-six/organisation-six.component';
 import { OrganisationSevenComponent } from './components/organisation/organisation-seven/organisation-seven.component';
+import { AutresReligionsComponent } from './components/autres-religions/autres-religions.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +121,7 @@ import { OrganisationSevenComponent } from './components/organisation/organisati
     OrganisationFiveComponent,
     OrganisationSixComponent,
     OrganisationSevenComponent,
+    AutresReligionsComponent,
   ],
   imports: [
     AppRoutingModule,

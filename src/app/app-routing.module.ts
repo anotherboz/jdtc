@@ -1,7 +1,7 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AncienTestamentComponent } from './components/ancien-testament/ancien-testament.component';
+import { AutresReligionsComponent } from './components/autres-religions/autres-religions.component';
 import { CommunauteComponent } from './components/communaute/communaute.component';
 import { HistoireComponent } from './components/histoire/histoire.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -21,10 +21,11 @@ const routes: Routes = [
   { path: 'nouveau-testament', component: NouveauTestamentComponent },
   { path: 'organisation', component: OrganisationComponent },
   { path: 'saints', component: SaintsComponent },
+  { path: 'autres-religions', component: AutresReligionsComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

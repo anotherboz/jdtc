@@ -13,7 +13,7 @@ export class MesseOneComponent implements OnInit {
     {
       label:
         'c’est le dernier jour de la semaine, le 7ème jour, le jour de Dieu',
-      attended: true,
+      attended: false,
     },
     {
       label:
